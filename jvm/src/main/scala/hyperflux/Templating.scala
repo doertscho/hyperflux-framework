@@ -22,7 +22,7 @@ object template_helpers {
       script(src := "js/generated.js")
     ),
     body(
-      width := 800,
+      maxWidth := 800,
       margin := "0 auto"
     )(
       contentElems

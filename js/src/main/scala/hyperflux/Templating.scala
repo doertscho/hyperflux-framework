@@ -8,6 +8,7 @@ import org.scalajs.dom
 @native
 object js_dom extends GlobalScope {
   val document: dom.raw.HTMLDocument = native
+  var location: String = native
 }
 
 object template_helpers {

@@ -18,8 +18,8 @@ lazy val hff = crossProject.
       "com.lihaoyi" %%% "scalatags" % "0.5.2",
       "org.scala-lang.modules" %% "scala-async" % "0.9.5"
     )
-  ).
-  jvmSettings(
+  )
+  .jvmSettings(
     libraryDependencies ++= Seq(
       "org.http4s" %% "http4s-dsl" % "0.10.0",
       "org.http4s" %% "http4s-blaze-server" % "0.10.0"

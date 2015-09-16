@@ -12,8 +12,8 @@ object protocol_helpers {
   
   @JSExport
   def callServer(url: String, srv: String, meth: String, args: String) = {
-    val req = Ajax.post(s"$url/$srv/$meth", args) map { _.responseText }
-    req onFailure { case e => alert(s"connection problem: ${e.getMessage}") }
-    req
+    val req = Ajax.post(s"$url/$srv/$meth", args)
+    req onFailure { case e: Throwable => alert(s"connection problem: ${e.getMessage}") }
+    req map { _.responseText }
   }
 }
